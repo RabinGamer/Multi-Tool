@@ -1,0 +1,63 @@
+import {
+  AlignLeft,
+  BadgePercent,
+  Binary,
+  Braces,
+  Calculator,
+  Calendar,
+  CaseSensitive,
+  Code2,
+  Dices,
+  FileText,
+  HeartPulse,
+  Image,
+  KeyRound,
+  Landmark,
+  Link,
+  Link2,
+  Percent,
+  QrCode,
+  Receipt,
+  Search,
+  ShieldCheck,
+  Sigma,
+  Sparkles,
+  Timer,
+  Type,
+  WrapText,
+} from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
+
+const icons: Record<string, LucideIcon> = {
+  AlignLeft,
+  BadgePercent,
+  Binary,
+  Braces,
+  Calculator,
+  Calendar,
+  CaseSensitive,
+  Code2,
+  Dices,
+  FileText,
+  HeartPulse,
+  Image,
+  KeyRound,
+  Landmark,
+  Link,
+  Link2,
+  Percent,
+  QrCode,
+  Receipt,
+  Search,
+  ShieldCheck,
+  Sigma,
+  Sparkles,
+  Timer,
+  Type,
+  WrapText,
+};
+
+export function ToolIcon({ name, className }: { name: string; className?: string }) {
+  const Icon = icons[name] || AlignLeft;
+  return <Icon className={className} aria-hidden="true" />;
+}
