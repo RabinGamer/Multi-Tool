@@ -5,7 +5,12 @@ import { accents } from '@/lib/accents';
 import { getCategory } from '@/data/categories';
 import type { Tool } from '@/lib/types';
 
-export function ToolCard({ tool }: { tool: Tool }) {
+export type ToolCardData = Pick<
+  Tool,
+  'slug' | 'name' | 'icon' | 'popular' | 'shortDescription' | 'category'
+>;
+
+export function ToolCard({ tool }: { tool: ToolCardData }) {
   const category = getCategory(tool.category);
   const accent = accents[category.accent];
   return (
